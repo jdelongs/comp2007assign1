@@ -7,9 +7,9 @@
 
 <h2>Beer Table</h2>
 
-<p>
-    @Html.ActionLink("Create A Beer", "Create")
-</p>
+
+    <button type="button" class="btn btn-secondary">@Html.ActionLink("Create A Beer", "Create")</button>
+
 <table class="table">
     <tr>
         <th>
@@ -42,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.canOrBottle)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.beerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.beerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.beerID })
+            <button class="btn btn-secondary">@Html.ActionLink("Edit", "Edit", new { id = item.beerID }) </button>
+            <button type="button" class="btn btn-info">@Html.ActionLink("Details", "Details", new { id = item.beerID })</button> 
+            <button type="button" class="btn btn-warning">@Html.ActionLink("Delete", "Delete", new { id = item.beerID })</button>
         </td>
     </tr>
 }
