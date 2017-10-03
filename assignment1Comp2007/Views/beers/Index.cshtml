@@ -1,0 +1,52 @@
+﻿@model IEnumerable<assignment1Comp2007.Models.beer>
+
+@{
+    ViewBag.Title = "Create A Beer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create A Beer", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.brewery.breweryLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.beerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.beerType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.canOrBottle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.brewery.breweryLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.beerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.beerType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.canOrBottle)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.beerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.beerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.beerID })
+        </td>
+    </tr>
+}
+
+</table>
