@@ -42,6 +42,7 @@
             @Html.DisplayFor(modelItem => item.canOrBottle)
         </td>
         <td>
+
             <button class="btn btn-secondary">@Html.ActionLink("Edit", "Edit", new { id = item.beerID }) </button>
             <button type="button" class="btn btn-info">@Html.ActionLink("Details", "Details", new { id = item.beerID })</button> 
             <button type="button" class="btn btn-warning">@Html.ActionLink("Delete", "Delete", new { id = item.beerID })</button>
